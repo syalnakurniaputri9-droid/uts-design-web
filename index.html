@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portofolio — Syalna Kurnia Putri</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title">Syalna Kurnia Putri</h1>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link active">Beranda</a>
+        <a href="karya.html" class="nav-link">Karya</a>
+        <a href="ketrampilan.html" class="nav-link">Keterampilan</a>
+        <a href="kontak.html" class="nav-link">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      
+      <img src="IMG/25bff151-c6bb-469f-b9da-297b8790d730.jpg" alt="Foto Syalna" class="profile-photo">
+      <div class="hero-text">
+        <h1>Syalna Kurnia Putri</h1>
+        <p class="lead">Mahasiswi | Web Developer Pemula | Desainer UI</p>
+        <p class="subtitle">Mahasiswi / Pengembang web pemula yang menyukai desain antarmuka, pengelolaan proyek, dan pengembangan aplikasi sederhana. Fokus pada front-end, desain responsif, dan pengelolaan basis data sederhana.</p>
+         <h3>Tujuan Karier</h3>
+        <p>
+        <p> Menjadi web developer full-stack yang mampu merancang UI yang estetis sekaligus membangun backend yang andal untuk aplikasi skala menengah.</p>
+        <div class="cta">
+          <a href="karya.html" class="button">Lihat Karya</a>
+          <a href="kontak.html" class="button button-outline">Hubungi Saya</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="about">
+      <h3>Tentang Saya</h3>
+      <ul>
+        <li><strong>Nama:</strong> Syalna Kurnia Putri</li>
+        <li><strong>Email:</strong> syalnakurniaputri9@gmail.com </li>
+        <li><strong>Lokasi:</strong> Bandungan, Kab. Semarang, Jawa Tengah, Indonesia</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Syalna Kurnia Putri — Portofolio Pribadi</p>
+    </div>
+  </footer>
+
+  <script>
+   
+    document.getElementById('year').textContent = new Date().getFullYear();
+    
+    (function(){
+      const links = document.querySelectorAll('.main-nav a');
+      links.forEach(a=>{
+        if (a.href === location.href || a.getAttribute('href') === location.pathname.split('/').pop()) {
+          a.classList.add('active');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>

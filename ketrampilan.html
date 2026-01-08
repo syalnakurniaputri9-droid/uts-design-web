@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keterampilan — Portofolio Syalna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title small">Keterampilan & Pengalaman</h1>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="karya.html" class="nav-link">Karya</a>
+        <a href="ketrampilan.html" class="nav-link active">Keterampilan</a>
+        <a href="kontak.html" class="nav-link">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Keterampilan Teknis</h2>
+      <ul class="skills-list">
+        <li>HTML5, CSS3 (responsive design)</li>
+        <li>JavaScript (dasar — DOM, event)</li>
+        <li>Python (PyQt5 untuk aplikasi desktop)</li>
+        <li>Git &amp; GitHub (versi kontrol)</li>
+        <li>SQL dasar (MySQL / SQLite)</li>
+        <li>Desain UI sederhana (Figma dasar)</li>
+      </ul>
+
+      <h2>Pengalaman & Pendidikan (Timeline)</h2>
+      <ol class="timeline">
+        <li>
+          <strong>2024 — 2025</strong>
+          <p>Proyek Aplikasi Pengelola Keuangan — Pengembang & dokumentasi.</p>
+        </li>
+        <li>
+          <strong>2023 — 2024</strong>
+          <p>Asisten Lab Pemrograman — membantu praktikum dan membimbing mahasiswa baru.</p>
+        </li>
+        <li>
+          <strong>2021 — 2025</strong>
+          <p>Mahasiswi — Program studi Informatika.</p>
+        </li>
+      </ol>
+
+      <h2>Testimoni</h2>
+      <div class="testimonials">
+        <blockquote>
+          <p>"Syalna bekerja teliti dan tepat waktu. Kualitas presentasinya sangat membantu tim."</p>
+          <cite>— Rina (Rekan Proyek)</cite>
+        </blockquote>
+
+        <blockquote>
+          <p>"Mampu menyederhanakan masalah kompleks menjadi solusi yang mudah dibaca."</p>
+          <cite>— Andi (Dosen Pembimbing)</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year3"></span> Syalna Kurnia Putri</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year3').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

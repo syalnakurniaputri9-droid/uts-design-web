@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontak — Portofolio Syalna</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1 class="site-title small">Kontak</h1>
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Beranda</a>
+        <a href="karya.html" class="nav-link">Karya</a>
+        <a href="ketrampilan.html" class="nav-link">Keterampilan</a>
+        <a href="kontak.html" class="nav-link active">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Informasi Kontak</h2>
+      <ul class="contact-info">
+        <li><strong>Alamat:</strong> Bandungan, Kab. Semarang, Jawa Tengah, Indonesia</li>
+        <li><strong>Email:</strong> syalnakurniaputri9@gmail.com</li>
+        <li><strong>Telepon:</strong> +62 852 9272 8020</li>
+        <li><strong>LinkedIn:</strong> <a href="#" target="_blank">linkedin.com/in/syalna</a></li>
+        <li><strong>Instagram:</strong> <a href="#" target="_blank">@leoskp_</a></li>
+      </ul>
+
+      <h3>Lokasi (Google Maps)</h3>
+        <div class="map-wrapper">
+        <iframe
+          title="Lokasi Syalna"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63330.29814012083!2d110.32538195643772!3d-7.22445300004717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7080cd7e22cd71%3A0x16bb3c727ec5a893!2sBandungan%2C%20Kabupaten%20Semarang%2C%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1761916562392!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          
+      </iframe>
+      </div>
+
+      <h3>Form Komentar</h3>
+      <form id="contactForm" class="contact-form" action="#" onsubmit="return handleSubmit(event)">
+        <label for="name">Nama</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="message">Komentar</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="button">Kirim</button>
+        <p id="formStatus" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year4"></span> Syalna Kurnia Putri</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year4').textContent = new Date().getFullYear();
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = document.getElementById('message').value.trim();
+      if (!name || !email || !msg) {
+        document.getElementById('formStatus').textContent = 'Mohon lengkapi semua kolom.';
+        return false;
+      }
+     
+      document.getElementById('formStatus').textContent = 'Terima kasih, komentar Anda telah diterima (simulasi).';
+      document.getElementById('contactForm').reset();
+      return false;
+    }
+  </script>
+</body>
+</html>
